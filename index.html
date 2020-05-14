@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Two Games</title>
+    <!-- This assignment practices using JavaScript tabs to display 2 games that demostrate random numbers, arrays, input fields, and DOM manipulation -->
+</head>
+<body>
+        <h1>J.C. Boyd</h1>
+        <h1>Shall We Play a Game?</h1>
+
+        <div class="container">
+            <div class="tabs">
+                <ul>
+                    <li class="trigger active" data-target="#coinToss">Coin Toss</li>
+                    <li class="trigger" data-target="#guessingGame">Guessing Game</li>
+                </ul>
+                
+                <div class="content" id="coinToss">
+                    <h2>Toss a Coin</h2>
+                    <div class=coinTossButtons>
+                        <button id="heads" class="coin">Heads</button>
+                        <button id="tails" class="coin">Tails</button>
+                    </div>
+                    <img src="./img/both.jpg" alt="U.S. Quarter Front and Back" id="quarter1">
+
+                    <div id="coinTossResult"></div>
+                    <div id="winLossRecord"></div>
+                </div>  <!-- end "coinToss" div -->
+
+                <div class="content" id="guessingGame">
+                    <h2>Guessing Game</h2>
+                    <p>I have selected a random number between 1 and 100.<br>See if you can guess it in 10 turns or fewer.<br>I'll tell you if your guess was too high or too low.</p>
+
+                    <form class="user-guess">
+                        Enter a guess: <input type="text" id="guess" name="guess" required="required">
+                    </form>
+                
+                    <p id="previousGuesses"></p>
+                    <p ><span id="guessResult"></span></p>
+                
+                    <div id="guessGameOver"></div>
+                </div>  <!-- end "guessingGame" div -->
+            </div>  <!-- end "tabs" div -->
+        </div>  <!-- end "container" div -->
+
+    <script src="script.js"></script>
+    <script src="coinToss.js"></script>
+    <script src="guessingGame.js"></script>
+</body>
+</html>
